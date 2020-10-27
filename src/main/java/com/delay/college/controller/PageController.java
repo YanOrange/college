@@ -10,6 +10,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+/**
+ * 页面控制器
+ */
 @Controller
 @RequestMapping("page")
 public class PageController extends BaseController{
