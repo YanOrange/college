@@ -45,7 +45,6 @@ public class EssayController extends BaseController {
         }else{
             Essay byId = essayService.findById(essay.getId());
             BeanUtils.copyProperties(essay,byId,"createTime","user","publishTime","type");
-//            byId.setType("稿件");
             byId.setState(0);
             byId.setUpdateTime(new Date());
 
