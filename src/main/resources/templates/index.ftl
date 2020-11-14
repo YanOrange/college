@@ -77,11 +77,10 @@
         <div class="left-nav">
             <div id="side-nav">
                 <ul id="nav">
-                    <#if user.status==0>
                     <li>
                         <a href="javascript:;">
-                            <i class="iconfont left-nav-li" lay-tips="主编模块">&#xe6b8;</i>
-                            <cite>主编模块</cite>
+                            <i class="iconfont left-nav-li" lay-tips="个人管理">&#xe6b8;</i>
+                            <cite>个人管理</cite>
                             <i class="iconfont nav_right">&#xe697;</i></a>
                         <ul class="sub-menu">
                             <li>
@@ -89,20 +88,62 @@
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>个人信息</cite></a>
                             </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="iconfont left-nav-li" lay-tips="科研成果管理">&#xe6b8;</i>
+                            <cite>科研成果管理</cite>
+                            <i class="iconfont nav_right">&#xe697;</i></a>
+                        <ul class="sub-menu">
                             <li>
-                                <a onclick="xadmin.add_tab('发布新闻','/page/editor')">
+                                <a onclick="xadmin.add_tab('发表科研成果','/page/editor')">
                                     <i class="iconfont">&#xe6a7;</i>
-                                    <cite>发布新闻</cite></a>
+                                    <cite>发表科研成果</cite></a>
                             </li>
                             <li>
-                                <a onclick="xadmin.add_tab('新闻管理','/page/essayList')">
+                                <a onclick="xadmin.add_tab('科研成果列表','/page/essayList')">
                                     <i class="iconfont">&#xe6a7;</i>
-                                    <cite>新闻管理</cite></a>
+                                    <cite>科研成果列表</cite></a>
                             </li>
                         </ul>
                     </li>
-                    </#if>
-                    <#if user.status==3||user.status==4>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="iconfont left-nav-li" lay-tips="区域模块">&#xe6b8;</i>
+                            <cite>区域模块</cite>
+                            <i class="iconfont nav_right">&#xe697;</i></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a onclick="xadmin.add_tab('高校管理','/page/schoolList')">
+                                    <i class="iconfont">&#xe6a7;</i>
+                                    <cite>高校管理</cite></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="iconfont left-nav-li" lay-tips="科研成果管理">&#xe6b8;</i>
+                            <cite>科研成果管理</cite>
+                            <i class="iconfont nav_right">&#xe697;</i></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a onclick="xadmin.add_tab('科研分类管理','/page/typeList')">
+                                    <i class="iconfont">&#xe6a7;</i>
+                                    <cite>科研分类管理</cite></a>
+                            </li>
+                            <li>
+                                <a onclick="xadmin.add_tab('待审核科研成果','/page/masterEssayList')">
+                                    <i class="iconfont">&#xe6a7;</i>
+                                    <cite>待审核科研成果</cite></a>
+                            </li>
+                            <li>
+                                <a onclick="xadmin.add_tab('过审科研成果','/page/masterEssayPassList')">
+                                    <i class="iconfont">&#xe6a7;</i>
+                                    <cite>过审科研成果</cite></a>
+                            </li>
+                        </ul>
+                    </li>
                     <li>
                         <a href="javascript:;">
                             <i class="iconfont left-nav-li" lay-tips="管理员模块">&#xe726;</i>
@@ -110,24 +151,9 @@
                             <i class="iconfont nav_right">&#xe697;</i></a>
                         <ul class="sub-menu">
                             <li>
-                                <a onclick="xadmin.add_tab('待审核新闻','/page/masterEssayList')">
+                                <a onclick="xadmin.add_tab('学生管理','/page/toGetMaster')">
                                     <i class="iconfont">&#xe6a7;</i>
-                                    <cite>待审核新闻</cite></a>
-                            </li>
-                            <li>
-                                <a onclick="xadmin.add_tab('过审新闻','/page/masterEssayPassList')">
-                                    <i class="iconfont">&#xe6a7;</i>
-                                    <cite>过审新闻</cite></a>
-                            </li>
-                            <li>
-                                <a onclick="xadmin.add_tab('类型管理','/page/typeList')">
-                                    <i class="iconfont">&#xe6a7;</i>
-                                    <cite>类型管理</cite></a>
-                            </li>
-                            <li>
-                                <a onclick="xadmin.add_tab('主编管理','/page/toGetMaster')">
-                                    <i class="iconfont">&#xe6a7;</i>
-                                    <cite>主编管理</cite></a>
+                                    <cite>学生管理</cite></a>
                             </li>
                             <li>
                                 <a onclick="xadmin.add_tab('管理员管理','/page/toAdmin')">
@@ -136,7 +162,6 @@
                             </li>
                         </ul>
                     </li>
-                    </#if>
                 </ul>
             </div>
         </div>

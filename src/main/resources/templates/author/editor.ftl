@@ -31,18 +31,23 @@
 <div class="layui-fluid">
     <div class="layui-row">
         <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-            <legend>在线编辑稿件</legend>
+            <legend>在线发表科研成果</legend>
         </fieldset>
 
         <#--<form class="layui-form" action="">-->
             <div class="wrapper">
                 <input type="hidden" name="id" value="<#if essay??>${essay.id!''}</#if>" id="id">
                 <input type="hidden" name="typeId" value="${(essay.type.id)!''}" id="typeId">
-                <label for="title">新闻标题</label>
+                <input type="hidden" name="schoolId" value="${(essay.school.id)!''}" id="schoolId">
+                <label for="title">科研成果标题</label>
                 <input type="text" class="title" id="title" name="title" value="<#if essay??>${essay.title!''}</#if>"/>
-                <label for="title">新闻类型</label>
+                <label for="title">科研成果类型</label>
                 <select id="type" class="title">
                     <option value="">请选择新闻类型...</option>
+                </select>
+                <label for="title">所属高校</label>
+                <select id="school" class="title">
+                    <option value="">请选择所属高校...</option>
                 </select>
                 <label for="content">正文</label>
                 <textarea cols="30" rows="10" id="content" class="content" name="content" data-provide='tinymce'><#if essay??>${essay.content!''}</#if></textarea>
@@ -63,6 +68,7 @@
 <script>
     $(function () {
         initType();
+        initSchool();
         tinymce.init({
             selector: "textarea[data-provide='tinymce']",
             upload_image_url: '/upload/cloud', //配置的上传图片的路由
@@ -105,10 +111,36 @@
         })
     }
 
+    //初始化高校
+    function initSchool(){
+        var schoolId = $('#schoolId').val();
+
+        $.ajax({
+            url:'/type/getAll',
+            type:'post',
+            contentType: "application/json;charset=UTF-8",
+            success:function (res) {
+                if (res.success){
+                    var list = res.data;
+                    var html = '<option value="">请选择所属高校...</option>';
+                    $.each(list, function (index, data) {
+                        if (schoolId&&schoolId==data.id){
+                            html+='<option value="'+data.id+'" selected>'+data.name+'</option>';
+                        } else {
+                            html+='<option value="'+data.id+'">'+data.name+'</option>';
+                        }
+                    })
+                    $('#school').html(html);
+                }
+            }
+        })
+    }
+
     function submit() {
         var title = jQuery('#title').val();
         var id = jQuery('#id').val();
         var typeId = jQuery('#type').val();
+        var schoolId = jQuery('#school').val();
         var content = tinymce.activeEditor.getContent();
         var data = {
             id:id,
@@ -116,10 +148,13 @@
             type:{
                 id:typeId
             },
+            school:{
+                id:schoolId
+            },
             content:content
         };
-        if (!(title && typeId && content)){
-            layer.msg('请完善新闻参数')
+        if (!(title && typeId && schoolId && content)){
+            layer.msg('请完善参数')
         }
         console.log(data);
         jQuery.ajax({

@@ -177,7 +177,7 @@
                 dataType:'json',
                 success:function (res) {
                     if (res.success){
-                        layer.msg('审核通过，稿件已发布', {icon: 1});
+                        layer.msg('审核通过，科研成果已发布', {icon: 1});
                         xadmin.father_reload();
                     } else {
                         layer.msg(res.msg, {icon: 2});
@@ -238,7 +238,8 @@
                             {field: 'id', title: 'ID', width: 80},
                             {field: 'title', title: '标题', sort: true, width: 120},
                             {field: 'type',width:80, title: '类型', sort: true,templet:'<div>{{d.type.name}}</div>'},
-                            {field: 'user',width:80, title: '作者', sort: true,templet:'<div>{{d.user.penName}}</div>'},
+                            {field: 'school',width:80, title: '所属高校', sort: true,templet:'<div>{{d.school.name}}</div>'},
+                            {field: 'user',width:80, title: '作者', sort: true,templet:'<div>{{d.user.name}}</div>'},
                             {field: 'createTime', title: '创建时间', sort: true, width: 150},
                             {field: 'updateTime', title: '最后一次更新时间', sort: true, width: 150},
                             {field: 'publishTime', title: '发布时间', sort: true, width: 150},
@@ -268,7 +269,7 @@
 
 </script>
 <script type="text/html" id="barTeacher">
-    <a title="查看"  onclick="xadmin.open('查看稿件','/essay/checkEssay?essayId={{d.id}}',800,600);" href="javascript:;">
+    <a title="查看"  onclick="xadmin.open('查看科研成果文件','/essay/checkEssay?essayId={{d.id}}',800,600);" href="javascript:;">
         <i class="layui-icon iconfont">&#xe6ac;</i>
     </a>
     <#--<a title="下载"  onclick="down({{d.id}});" href="javascript:;">-->

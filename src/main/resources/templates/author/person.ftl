@@ -40,9 +40,9 @@
                     </div>
                 </div>
                 <div class="layui-inline">
-                    <label class="layui-form-label">笔名</label>
+                    <label class="layui-form-label">学校</label>
                     <div class="layui-input-block">
-                        <div class="layui-form-mid">${user.penName!''}</div>
+                        <div class="layui-form-mid">${user.school!''}</div>
                     </div>
                 </div>
             </div>

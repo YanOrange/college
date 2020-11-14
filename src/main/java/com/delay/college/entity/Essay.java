@@ -27,6 +27,10 @@ public class Essay {
     @ManyToOne(fetch = FetchType.EAGER)
     private Type type;//类型
 
+    @JoinColumn(name = "school_id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    private School school;//高校
+
     private Integer state;//状态 1发布 2打回 0待审核
     private String remark;//审核意见
 }

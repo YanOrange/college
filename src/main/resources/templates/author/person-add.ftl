@@ -52,10 +52,10 @@
             </div>
             <div class="layui-form-item">
                 <label for="name" class="layui-form-label">
-                    <span class="x-red">*</span>笔名
+                    <span class="x-red">*</span>学校
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="username" name="penName" required="" lay-verify="required"
+                    <input type="text" name="school" required="" lay-verify="required"
                            autocomplete="off" class="layui-input" value="">
                 </div>
             </div>

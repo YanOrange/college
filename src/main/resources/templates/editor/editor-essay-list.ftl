@@ -268,7 +268,7 @@
 
 </script>
 <script type="text/html" id="barTeacher">
-    <a title="查看"  onclick="xadmin.open('查看稿件','/essay/checkEssay?essayId={{d.id}}',800,600);" href="javascript:;">
+    <a title="查看"  onclick="xadmin.open('查看科研成果文件','/essay/checkEssay?essayId={{d.id}}',800,600);" href="javascript:;">
         <i class="layui-icon iconfont">&#xe6ac;</i>
     </a>
     <#--<a title="下载"  onclick="down({{d.id}});" href="javascript:;">-->

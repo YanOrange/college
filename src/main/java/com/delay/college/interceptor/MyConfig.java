@@ -40,7 +40,7 @@ public class MyConfig implements WebMvcConfigurer {
 
 
         // 拦截配置
-        addInterceptor.addPathPatterns("/page/index")
+        addInterceptor.addPathPatterns("/**")
                 .excludePathPatterns("/login/**")
                 .excludePathPatterns("/page/login")
                 .excludePathPatterns("/page/add")

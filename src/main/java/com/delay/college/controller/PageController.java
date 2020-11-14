@@ -149,6 +149,24 @@ public class PageController extends BaseController{
         model.addAttribute("status",status);
         return "author/person-add";
     }
+
+    /**
+     * 新增高校
+     * @return
+     */
+    @RequestMapping("addSchool")
+    public String addSchool(){
+        return "school/school-add";
+    }
+
+    /**
+     * 高校列表
+     * @return
+     */
+    @RequestMapping("schoolList")
+    public String schoolList(){
+        return "school/school-list";
+    }
     /**
      * 新增类型
      * @return

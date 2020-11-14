@@ -22,6 +22,7 @@ public class User {
     private String birthDay;//生日
     private String phone;
     private String idCard;
+    private String school;
     private String account;
     private String passWord;
     @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss",timezone = "GMT-8")
