@@ -23,7 +23,7 @@ public class LoginController extends BaseController{
 
         User user = userService.findByAccountAndPassWord(userName,passWord);
         if(user==null){
-            return ExecuteResult.fail(1,"用户passWord名不存在或密码错误");
+            return ExecuteResult.fail(1,"用户名不存在或密码错误");
         }
         if(user.getStatus().equals(1)){
             return ExecuteResult.fail(1,"账号权限不足");
