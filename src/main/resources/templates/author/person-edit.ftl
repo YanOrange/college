@@ -38,7 +38,7 @@
                     <span class="x-red">*</span>学校
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="username" name="penName" required="" lay-verify="required"
+                    <input type="text" id="username" name="school" required="" lay-verify="required"
                            autocomplete="off" class="layui-input" value="${author.school!''}">
                 </div>
             </div>

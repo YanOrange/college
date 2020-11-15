@@ -63,8 +63,8 @@
                     </form>
                 </div>
                 <div class="layui-card-header">
-                    <button class="layui-btn layui-btn-danger" onclick="xadmin.open('新增','/page/addschool',800,600)" href="javascript:;">
-                        <i class="layui-icon iconfont">&#xe6b9;</i>新增类型
+                    <button class="layui-btn layui-btn-danger" onclick="xadmin.open('新增','/page/addSchool',800,600)" href="javascript:;">
+                        <i class="layui-icon iconfont">&#xe6b9;</i>新增高校
                     </button>
                     <button class="layui-btn layui-btn-danger" onclick="delAll()">
                         <i class="layui-icon"></i>批量删除</button></div>
@@ -105,7 +105,7 @@
 </script>
 <script>
     /*操作数据*/
-    /*类型-删除*/
+    /*高校-删除*/
     function member_del(obj, id) {
         var arr = [];
         arr.push(id);
@@ -187,7 +187,7 @@
                         cols: [[
                             {checkbox: true},
                             {field: 'id', title: 'ID', width: 80},
-                            {field: 'name', title: '类型名', sort: true, width: 120},
+                            {field: 'name', title: '高校名称', sort: true, width: 120},
                             {field: 'createTime', title: '创建时间', sort: true, width: 150},
                             {toolbar:'#barTeacher',title:'操作',width: 120}
                         ]]

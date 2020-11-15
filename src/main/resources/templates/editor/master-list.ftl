@@ -109,7 +109,7 @@
     function member_del(obj, id) {
         var arr = [];
         arr.push(id);
-        layer.confirm('确认要永久删除吗？删除后该主编的新闻将全部删除', function (index) {
+        layer.confirm('确认要永久删除吗？删除后该学生的科研成果将全部删除', function (index) {
             //发异步删除数据
             $.ajax({
                 url: '/user/delete',

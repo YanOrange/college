@@ -43,7 +43,7 @@
                 <input type="text" class="title" id="title" name="title" value="<#if essay??>${essay.title!''}</#if>"/>
                 <label for="title">科研成果类型</label>
                 <select id="type" class="title">
-                    <option value="">请选择新闻类型...</option>
+                    <option value="">请选择科研成果类型...</option>
                 </select>
                 <label for="title">所属高校</label>
                 <select id="school" class="title">
@@ -97,7 +97,7 @@
             success:function (res) {
                 if (res.success){
                     var list = res.data;
-                    var html = '<option value="">请选择新闻类型...</option>';
+                    var html = '<option value="">请选择科研成果类型...</option>';
                     $.each(list, function (index, data) {
                         if (typeId&&typeId==data.id){
                             html+='<option value="'+data.id+'" selected>'+data.name+'</option>';
@@ -116,7 +116,7 @@
         var schoolId = $('#schoolId').val();
 
         $.ajax({
-            url:'/type/getAll',
+            url:'/school/getAll',
             type:'post',
             contentType: "application/json;charset=UTF-8",
             success:function (res) {

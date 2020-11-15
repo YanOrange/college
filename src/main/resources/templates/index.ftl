@@ -62,7 +62,7 @@
                         <#--<dd>-->
                             <#--<a onclick="xadmin.open('个人信息','http://www.baidu.com')">个人信息</a></dd>-->
                         <dd>
-                            <a onclick="xadmin.open('切换帐号','/page/login')">切换帐号</a></dd>
+                            <a href="/page/exit">切换帐号</a></dd>
                         <dd>
                             <a href="/page/exit">退出</a></dd>
                     </dl>
@@ -77,6 +77,7 @@
         <div class="left-nav">
             <div id="side-nav">
                 <ul id="nav">
+                    <#if user.status==0>
                     <li>
                         <a href="javascript:;">
                             <i class="iconfont left-nav-li" lay-tips="个人管理">&#xe6b8;</i>
@@ -108,6 +109,8 @@
                             </li>
                         </ul>
                     </li>
+                    </#if>
+                    <#if user.status==3>
                     <li>
                         <a href="javascript:;">
                             <i class="iconfont left-nav-li" lay-tips="区域模块">&#xe6b8;</i>
@@ -162,6 +165,8 @@
                             </li>
                         </ul>
                     </li>
+                    </#if>
+
                 </ul>
             </div>
         </div>

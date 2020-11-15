@@ -20,7 +20,7 @@
 <body class="login-bg">
     
     <div class="login layui-anim layui-anim-up">
-        <div class="message">x-admin2.0-管理登录</div>
+        <div class="message">高校科研成果-管理登录</div>
         <div id="darkbannerwrap"></div>
         
         <form method="post" class="layui-form" id="myform">
@@ -28,7 +28,7 @@
             <hr class="hr15">
             <input name="passWord" lay-verify="required" placeholder="密码"  type="password" class="layui-input">
             <hr class="hr15">
-            <a href="/page/add?status=0" style="float: right;">主编注册</a>
+            <a href="/page/add?status=0" style="float: right;">学生注册</a>
             <hr class="hr15">
             <input value="登录" lay-submit lay-filter="login" style="width:100%;" type="submit">
             <hr class="hr20" >
