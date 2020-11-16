@@ -20,8 +20,8 @@ public class Essay {
     @Lob
     @Column(columnDefinition="TEXT")
     private String content;//正文
-    private Date createTime;
-    private Date updateTime;
+    private Date createTime;//创建时间
+    private Date updateTime;//最后一次修改时间
     private Date publishTime;//发布时间
     @JoinColumn(name = "type_id")
     @ManyToOne(fetch = FetchType.EAGER)
