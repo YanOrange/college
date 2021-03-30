@@ -29,7 +29,11 @@ public class EssayController extends BaseController {
     private TypeService typeService;
 
 
-    //保存
+    /**
+     * 发表科研成果
+     * @param essay
+     * @return
+     */
     @RequestMapping("save")
     @ResponseBody
     public ExecuteResult save(@RequestBody Essay essay){

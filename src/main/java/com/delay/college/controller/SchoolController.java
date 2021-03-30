@@ -24,7 +24,7 @@ public class SchoolController extends BaseController{
     @Autowired
     SchoolService schoolService;
     /**
-     * 获取全部类型
+     * 获取全部高校
      * @return
      */
     @RequestMapping("getAll")
@@ -34,7 +34,7 @@ public class SchoolController extends BaseController{
         return ExecuteResult.ok(list);
     }
     /**
-     * 更改类型页面
+     * 更改高校页面
      * @return
      */
     @RequestMapping("toEditSchool")
@@ -46,7 +46,7 @@ public class SchoolController extends BaseController{
         return "school/school-edit";
     }
     /**
-     * 更改类型
+     * 更改高校
      * @return
      */
     @RequestMapping("editInfo")
@@ -58,7 +58,7 @@ public class SchoolController extends BaseController{
         return ExecuteResult.ok();
     }
     /**
-     *  删除类型
+     *  删除高校
      * @return
      */
     @RequestMapping("delete")
@@ -73,7 +73,7 @@ public class SchoolController extends BaseController{
         return ExecuteResult.ok();
     }
     /**
-     * 添加类型
+     * 添加高校
      * @return
      */
     @RequestMapping("add")
