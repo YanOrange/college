@@ -159,9 +159,9 @@
                                     <cite>学生管理</cite></a>
                             </li>
                             <li>
-                                <a onclick="xadmin.add_tab('管理员管理','/page/toAdmin')">
+                                <a onclick="xadmin.add_tab('学生管理','/page/toAdmin')">
                                     <i class="iconfont">&#xe6a7;</i>
-                                    <cite>管理员管理</cite></a>
+                                    <cite>学生管理</cite></a>
                             </li>
                         </ul>
                     </li>
